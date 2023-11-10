@@ -16,10 +16,12 @@ public class GhostTesting : MonoBehaviour
         fsm.AddState("B" , new State(onEnter : _ => print("B") , isGhostState : true));
         fsm.AddState("C" , onEnter : _ => print("C"));
 
-        fsm.AddTransition("A" , "B");
-        fsm.AddTransition("B" , "C");
+        fsm.AddTransition("A" , "B" );
+        fsm.AddTransition("B" , "C" , onTransition:_ => print("to C"));
 
         fsm.Init();    // Prints "A"
         fsm.OnLogic(); // Prints "B" and then "C"
+        Debug.Log($"{fsm.GetActiveHierarchyPath()}");
     }
+
 }

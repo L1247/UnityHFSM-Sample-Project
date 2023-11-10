@@ -58,7 +58,7 @@ public class GuardAI : MonoBehaviour
 
         // Because the exit transition should have the highest precedence,
         // it is added before the other transitions.
-        fightFsm.AddExitTransition("Wait");
+        fightFsm.AddExitTransition("Wait",onTransition:_ => print("wait on transitions"));
 
         fightFsm.AddTransition(new TransitionAfter("Wait", "Telegraph", 0.5f));
         fightFsm.AddTransition(new TransitionAfter("Telegraph", "Hit", 0.42f));
