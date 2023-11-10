@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 860228560}
   - component: {fileID: 860228559}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: GhostTesting
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
